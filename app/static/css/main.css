@@ -1,0 +1,27 @@
+/*¹«ÓÃ*/
+.comwidth{width:1330px;margin-left:auto;margin-right:auto;}
+.logo{float:left;}
+.right{float:right;}
+/*topbar*/
+.topbar{height:120px;background-color:#ffffff;line-height:120px;}
+.menu{padding-left:120px;}
+/*frame*/
+.frame{height:625px;background-color:#ce3b3b;}
+.home{position:absolute;z-index:1;}
+/*searchbox*/
+.searchbox{width:280px;height:80px;line-height:80px;padding-left:10px}
+.dllogo{padding-left:10px}
+.search_text{width:234px;height:35px;}
+.bang{width:250px;padding-left:60px;margin-left:auto;margin-right:auto;}
+.bang2{width:250px;margin-left:auto;margin-right:auto;}
+.blue{width:230px;height:60px;line-height:60px; background-color:#0187d0;}
+.blank{width:230px;height:430px; background-color:#FFFFFF;}
+.blank ul{width:230px; height:43px; list-style:none; padding:0px; margin:0px;}
+.blank ul li{width:230px; height:43px; float:left; text-align:center; line-height:43px; }
+.jt{width:50px;height:50px;padding-left:673px;line-height:30px;}
+.transparent_class {
+filter:alpha(opacity=50);
+opacity: 0.5;
+}
+
+

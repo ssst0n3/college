@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+            <ul id="stories">
+                <li>
+    <a href="/original-experiences/barcelona/from-here-to-infinity">
+                <div style="background-image:url(https://f22bfca7a5abd176cefa-59c40a19620c1f22577ade10e9206cf5.ssl.cf1.rackcdn.com/u/grand-hotel-central-teaser.jpg);"></div>
+                <div>
+            <div>
+                <div>
+                    <h2>From Here to Infinity</h2>
+                    <h3>Grand Hotel Central, Barcelona, Spain</h3>
+                    <span>Explore</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li>
+    <a href="/original-experiences/halkidiki/barefoot-on-aegean-shores">
+                <div style="background-image:url(https://f22bfca7a5abd176cefa-59c40a19620c1f22577ade10e9206cf5.ssl.cf1.rackcdn.com/800x800/ekies-teaser.jpg);"></div>
+                <div>
+            <div>
+                <div>
+                    <h2>Barefoot on Aegean Shores</h2>
+                    <h3>Ekies All Senses Resort, Halkidiki, Greece</h3>
+                    <span>Explore</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+<li>
+    <a href="/original-experiences/parrano-umbria/the-silent-dinner">
+                <div style="background-image:url(https://f22bfca7a5abd176cefa-59c40a19620c1f22577ade10e9206cf5.ssl.cf1.rackcdn.com/u/teaser-eremito-800x800.jpg);">
+                             <video class="bgvid desktop-only" id="video-5" loop>
+                    <source src="https://f22bfca7a5abd176cefa-59c40a19620c1f22577ade10e9206cf5.ssl.cf1.rackcdn.com/u/Eremito_mix_800px-1.mp4" type="video/mp4">
+                </video>
+                    </div>
+                <div>
+            <div>
+                <div>
+                    <h2>The Silent Dinner</h2>
+                    <h3>Eremito, Parrano, Umbria, Italy</h3>
+                    <span>Explore</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>
+</body>
+</html>
