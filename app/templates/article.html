@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head><head>
+<body>
+
+<h1>
+{% if title %}
+  {{ title }}
+{% else %}
+  数据库错误
+{% endif %}
+</h1>
+
+<div class="article_content">
+{% if content %}
+  {{ content }}
+{% else %}
+  数据库错误
+{% endif %}
+</div>
+
+</body>
+</html>
