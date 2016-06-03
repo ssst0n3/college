@@ -1,6 +1,9 @@
 #-*- coding:utf-8 -*-
 
 import sys
+# import json
+from models import *
+
 reload(sys)
 sys.setdefaultencoding('utf8')
 
@@ -17,7 +20,10 @@ def index():
 @app.route('/xxgg/')
 def xxgg():
     pagename = "信息公告"
-    return render_template("xinxigonggao.html", pagename = pagename)
+    articles,type,typeName = load_articles_all_type()
+    # articles_json = json.dumps(articles)
+    # return render_template("xinxigonggao.html", pagename = pagename, articles=articles_json)
+    return render_template("xinxigonggao.html", pagename = pagename, articles=articles, type = type, typeName = typeName)
 
 # 学院概况页
 @app.route('/xygk/')
@@ -30,9 +36,11 @@ def xygk():
 @app.route('/article/<int:id>')
 def article(id=None):
     # 数据库操作，返回title， content等信息
+    article_info = show_article(id)
+
     if id:
-        title = "我是一篇id为" + str(id) + "的文章的标题"
-        content = "我是一篇id为" + str(id) + "的文章的内容"
+        title = article_info['title']
+        content = article_info['content']
         return render_template('article.html', title=title, content=content)
     else:
         return 'illegal access'
