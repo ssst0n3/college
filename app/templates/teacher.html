@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>资讯管理学院</title>
+<link type="text/css" rel="stylesheet" href="style/css1.css">
+<link type="text/css" rel="stylesheet" href="style/main.css">
+<script src="jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$(".bm").click(function(){
+    $(".laoshi").slideToggle("slow");
+  });
+});
+</script>
+<script type="text/javascript">
+function mouseOver()
+{
+document.getElementById('b1').src ="images/niubi.jpg"
+}
+function mouseOut()
+{
+document.getElementById('b1').src ="images/lac3.jpg"
+}
+function CanShu(id,key){
+
+var show=document.getElementById(id).style.display;
+
+if(show=='none')
+
+{
+document.getElementById(id).style.display='block';
+}
+else{
+document.getElementById(id).style.display='none';
+}
+
+}
+
+function mOver2(obj)
+{
+obj.innerHTML="师生团队<br>师资力量<br>学生组织<br>学生党建 "
+}
+
+function mOut2(obj)
+{
+obj.innerHTML="师生团队"
+}
+function mOver1(obj)
+{
+obj.innerHTML="学院介绍<br>光辉历史<br>院徽<br>组织机构 "
+}
+
+function mOut1(obj)
+{
+obj.innerHTML="学院介绍"
+}
+function mOver3(obj)
+{
+obj.innerHTML="学科专业<br>学科介绍<br>本科专业<br>硕士专业<br>博士专业 "
+}
+
+function mOut3(obj)
+{
+obj.innerHTML="学科专业"
+}
+function mOver4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两学一做”专题党课学习顺利举行。2016/5/31 12:38:08";
+document.getElementById(id1).style.display='none';
+document.getElementById(id2).style.display='none';
+document.getElementById(id3).style.display='none';
+}
+
+function mOut4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两...";
+document.getElementById(id1).style.display='block';
+document.getElementById(id2).style.display='block';
+document.getElementById(id3).style.display='block';
+}
+function anzhichengfen(id1,id2,id3,id4,id5,id6)
+{
+document.getElementById(id1).style.display='none';
+document.getElementById(id2).style.display='none';
+document.getElementById(id3).style.display='block';
+document.getElementById(id4).style.display='block';
+document.getElementById(id5).style.display='none';
+document.getElementById(id6).style.display='none';
+}
+function anshouzimufen(id1,id2,id3,id4,id5,id6)
+{
+document.getElementById(id1).style.display='none';
+document.getElementById(id2).style.display='none';
+document.getElementById(id3).style.display='none';
+document.getElementById(id4).style.display='none';
+document.getElementById(id5).style.display='block';
+document.getElementById(id6).style.display='block';
+}
+function anzhuanyefen(id1,id2,id3,id4,id5,id6)
+{
+document.getElementById(id1).style.display='block';
+document.getElementById(id2).style.display='block';
+document.getElementById(id3).style.display='none';
+document.getElementById(id4).style.display='none';
+document.getElementById(id5).style.display='none';
+document.getElementById(id6).style.display='none';
+}
+</script>
+</head>
+<body>
+<div style="position:fixed; top:0; left:auto;width:100%;">
+<div class="headerbar">
+	<div class="topbar">
+	  <div class="comwidth">
+			<div class="logo fl">
+				<a href="im.sTon31.html">  <img src="images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
+			</div>
+			<div class="menu fl">
+				<div class="suibian">
+				<span><h2 align="center" class="STYLE14" ><a href="#xueyuan"><div id="key1" class="bttt fl">师资力量</div></a>
+				<span><div class="icon flip fr" ><img src="images/delta.png"alt="delta"style="padding-left:10px"></div></span>
+				</h2></a></span></div>
+			</div>
+			<div class="right fr">
+				<span><a href="images/arcore.jpg"> <img src="images/En.png" alt="en" align="middle"style="padding-right:10px">	
+				<span class="searchlogo"><a href="#"><img src="images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
+			<input type="text" class="search_text STYLE28 STYLE13"style="background-color:rgba(189,195,199,0.5);border:none;"></a></span>
+	    	</div>		
+	  </div>
+    </div>
+<div class="comwidth1">  
+		<div id="caidan" class="caidan panel fl">
+			    <div class="caidan1 STYLE16">
+					<div class="cd3 fl" align="center"><a href="im.sTon31.html" class="a2">学院概况</a></div>
+					<div class="cd3 fl" align="center"><a href="#xinxi" class="a2">信息公告</a></div>
+					<div class="cd3 fl" align="center"><a href="#huodon" class="a2">学院活动</a></div>
+			    </div>
+				<div class="baixian"></div>
+				<div class="caidan2">
+					<div class="cd21 fl"\>
+						<div class="cdd STYLE19 fl">
+							<ul class="bg">
+								<li class="STYLE19" ><a href="#" class="a2">学院介绍</a></li>
+								<li class="STYLE19" onClick="CanShu('chulai','one')" id="one"><a href="#" class="a2">师生团队</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学院专业</a></li>
+							</ul>
+							</div>
+						<div id="chulai" class="zk1 fr">
+							<img src="images/shenme.png" style="margin-top:50px;padding-right:10px;">
+							<ul class="bg fr">
+								<li class="STYLE19"><a href="#" class="a2">师资力量</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生组织</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生党建</a></li>
+							</ul>
+						</div>
+					</div>	
+					<div class="cd22 fl">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="bangong.html" class="a2">办公信息</a></li>
+								<li class="STYLE19"><a href="#" class="a2">本科教学教务</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生工作</a></li>
+								<li class="STYLE19"><a href="#" class="a2">科研与研究生</a></li>
+								<li class="STYLE19"><a href="#" class="a2">对外交流合作</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd21 fr">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="#" class="a2">正在举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">即将举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">全部</a></li>
+							</ul>
+							</div>
+					</div>
+				</div>
+		</div>
+</div>
+</div>	
+</div>
+<div class="topbar"></div>
+<div class="frame2">	
+	<div class="comwidth">
+		<div class="teacherbox"> 
+		<div id="caidan" class="caidan233">
+			    <div class="caidan2333 STYLE22">
+					<div class="cd33 fl" align="center"><div class="oxox azy" onClick="anzhuanyefen('azy1','azy2','azc1','azc2','aszm1','aszm2')"><a href="#">按专业分</a><div class="bluewine azy1" id="azy1"></div></div></div>
+					<div class="cd33 fl" align="center"><div class="oxox azc" onClick="anzhichengfen('azy1','azy2','azc1','azc2','aszm1','aszm2')"><a href="#">按职称分</a><div class="bluewine azc1" id="azc1"></div></div></div>
+					<div class="cd33 fl" align="center"><div class="oxox1 aszm" onClick="anshouzimufen('azy1','azy2','azc1','azc2','aszm1','aszm2')"><a href="#">按首字母分</a><div class="bluewine aszm1"id="aszm1"></div></div></div>
+			    </div>
+				<div class="anzhuanye" id="azy2" >
+					<div class="xinguan box233 STYLE21">
+						信息管理与信息系统
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="tushu box233 STYLE21">
+						图书馆
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="dangan box233 STYLE21">
+						档案学
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="baomi box233 STYLE21">
+						保密管理
+						<div class="bm fr" id="jiahao"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="laoshi box233 STYLE23" align="center">
+						<div class="ls fl" align="center"><a href="caoshujin.html">曹树金</a></div>
+						<div class="ls fl" align="center"><a href="#">韦景竹</a></div>
+						<div class="ls fl" align="center"><a href="#">宋琳琳</a></div>
+					</div>
+				</div>
+				<div class="anzhicheng azc2" id="azc2">
+					<div class="jiaoshouxiaoxing box233 STYLE21">
+						教授
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="fujs box233 STYLE21">
+						副教授
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="jiangshi box233 STYLE21">
+						讲师
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="tepin box233 STYLE21">
+						特聘教授
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="zuokejiaoshou box233 STYLE21">
+						做客教授
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+					<div class="daoshi box233 STYLE21">
+						兼职硕士生导师
+						<div class="fr"><a href="#"><img src="images/+++.png"></a></div>
+						<div class="bluewine"></div>
+					</div>
+				</div>
+				<div class="anshouzimu aszm2" id="aszm2">
+					<div class="atoz STYLE23"align="center">
+					<span style="padding:7px"><a href="#A">A</a></span>
+					<span style="padding:7px"><a href="#B">B</a></span>
+					<span style="padding:7px"><a href="#C">C</a></span>
+					<span style="padding:7px"><a href="#D">D</a></span>
+					<span style="padding:7px"><a href="#E">E</a></span>
+					<span style="padding:7px"><a href="#F">F</a></span>
+					<span style="padding:7px"><a href="#G">G</a></span>
+					<span style="padding:7px"><a href="#H">H</a></span>
+					<span style="padding:7px"><a href="#I">I</a></span>
+					<span style="padding:7px"><a href="#J">J</a></span>
+					<span style="padding:7px"><a href="#K">K</a></span>
+					<span style="padding:7px"><a href="#L">L</a></span>
+					<span style="padding:7px"><a href="#M">M</a></span>
+					<span style="padding:7px"><a href="#N">N</a></span>
+					<span style="padding:7px"><a href="#O">O</a></span>
+					<span style="padding:7px"><a href="#P">P</a></span>
+					<span style="padding:7px"><a href="#Q">Q</a></span>
+					<span style="padding:7px"><a href="#R">R</a></span>
+					<span style="padding:7px"><a href="#S">S</a></span>
+					<span style="padding:7px"><a href="#T">T</a></span>
+					<span style="padding:7px"><a href="#U">U</a></span>
+					<span style="padding:7px"><a href="#V">V</a></span>
+					<span style="padding:7px"><a href="#W">W</a></span>
+					<span style="padding:7px"><a href="#X">X</a></span>
+					<span style="padding:7px"><a href="#Y">Y</a></span>
+					<span style="padding:7px"><a href="#Z">Z</a></span>
+					</div>
+					<div class="szmls">
+					<div class="A STYLE24">A</div></a>
+					<div class="B STYLE24">B</div></a>
+					<a name="z"><div class="C STYLE24">C
+									<div class="lsj"><a href="caoshujin.html">曹树金</a></div>
+									<div class="lsj"><a href="#">曹效阳</a></div>
+									<div class="lsj"><a href="#">程焕文</a></div>
+									<div class="lsj"><a href="#">陈定权</a></div>
+									<div class="lsj"><a href="#">陈永生</a></div>
+									<div class="lsj"><a href="#">蔡向高</a></div>
+								</div></a>
+					<a name="D"><div class="D STYLE24">D
+									<div class="lsj"><a href="#">杜育松</a></div>
+								</div></a>
+					<a name="E"><div class="E STYLE24">E</div></a>
+					<a name="F"><div class="F STYLE24">F</div></a>
+					<a name="G"><div class="G STYLE24">G</div></a>
+					<a name="H"><div class="H STYLE24">H</div></a>
+					<a name="I"><div class="I STYLE24">I</div></a>
+					<a name="J"><div class="J STYLE24">J</div></a>
+					<a name="K"><div class="K STYLE24">K</div></a>
+					<a name="L"><div class="L STYLE24">L</div></a>
+					<a name="M"><div class="M STYLE24">M</div></a>
+					<a name="N"><div class="N STYLE24">N</div></a>
+					<a name="O"><div class="O STYLE24">O</div></a>
+					<a name="P"><div class="P STYLE24">P</div></a>
+					<a name="Q"><div class="Q STYLE24">Q</div></a>
+					<a name="R"><div class="R STYLE24">R</div></a>
+					<a name="S"><div class="S STYLE24">S
+									<div class="lsj"><a href="#">宋琳琳</a></div>
+								</div></a>
+					<a name="T"><div class="T STYLE24">T</div></a>
+					<a name="U"><div class="U STYLE24">U</div></a>
+					<a name="V"><div class="A STYLE24">V</div></a>
+					<a name="W"><div class="W STYLE24">W
+									<div class="lsj"><a href="#">韦景竹</a></div>
+								</div></a>
+					<a name="X"><div class="X STYLE24">X</div></a>
+					<a name="Y"><div class="Y STYLE24">Y
+									<div class="lsj"><a href="#">杨利军</a></div>
+									<div class="lsj"><a href="#">杨锐</a></div>
+								</div></a>
+					<a name="Z"><div class="Z STYLE24">Z
+									<div class="lsj"><a href="#">张春华</a></div>								
+									<div class="lsj"><a href="#">张海亚</a></div>
+									<div class="lsj"><a href="#">张洋</a></div>
+									<div class="lsj"><a href="#">张宇星</a></div>
+									<div class="lsj"><a href="#">朱候</a></div>
+								</div></a>
+					</div>
+				</div>
+		</div>
+		</div>	
+	</div>	
+</div>
+<div class="bottombar">
+<div class="comwidth">
+	<div class="botlogo fl">
+		<div class="sysupic">
+			<img src="images/sysu.jpg" alt="中山大学" style="padding-top:20px">
+		</div>
+		<div class="copyright">
+			<img src="images/cpr.jpg" alt="copyright" style="padding-left:75px;">
+		</div>		
+	</div>	
+	<div class="yishushu fl"><div class="yishu"></div></div>
+	<div class="findus fl">
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">网站地图</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">关于我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">加入我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">广告协议</a></li>
+			</ul>
+		</div>
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">建议意见</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">院长热线</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">邮件建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="guanzhu fl">
+		<div class="STYLE13 STYLE39 STYLE26">关注我们</div>
+		<div class="erweima"><img src="images/cross.png" alr="erweimama" width=100% height=100%></div>
+	</div>
+	<div class="blank2 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26">
+				  <div align="left">联系我们</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">电话：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">传真：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">邮件：imim@mail.sysu.edu.cn</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">广州市广州大学城外环东路132号</div>
+				</li>
+			</ul>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

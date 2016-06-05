@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 
 import sys
-# import json
+from flask import json, request
 from models import *
 
 reload(sys)
@@ -20,10 +20,24 @@ def index():
 @app.route('/xxgg/')
 def xxgg():
     pagename = "信息公告"
-    articles,type,typeName = init_articles_xxgg()
+    articles,type,typeName = load_articles_classfied_by_type()
     # articles_json = json.dumps(articles)
     # return render_template("xinxigonggao.html", pagename = pagename, articles=articles_json)
     return render_template("xinxigonggao.html", pagename = pagename, articles=articles, type = type, typeName = typeName)
+
+
+
+# 信息公告页
+@app.route('/test/')
+def test():
+    # pagename = "信息公告"
+    # articles,type,typeName = load_articles_classfied_by_type()
+    # articles_json = json.dumps(articles)
+    # return render_template("xinxigonggao.html", pagename = pagename, articles=articles_json)
+    return render_template("bangong.html")
+
+
+
 
 # 学院概况页
 @app.route('/xygk/')
@@ -47,20 +61,39 @@ def article(id=None):
 
 # 后台管理路由
 @app.route('/admin/')
-@app.route('/admin/<string:operation>/')
+@app.route('/admin/<string:operation>/', methods=['GET','POST'])
 @app.route('/admin/<string:operation>/<string:tableName>')
-def admin(operation=None, tableName=None):
+def admin(operation=None, tableName=None, action="show"):
     if operation:
         if operation == 'show_tables':
-            if tableName:
-                exec ("records, columns = init_" + tableName + "_admin()")
+            if tableName == 'users' or tableName == 'articles':
+                exec ("records, columns = init_load_table_order_by_id_" + tableName + "()")
                 return render_template("admin_templates/tables-data.html", tableName = tableName, records = records, columns = columns)
             else:
                 return render_template("admin_templates/tables-data.html")
+        elif operation == 'edit_table':
+            # inputData = request.args.get('d1', None, type=string)
+            id = request.form["id"]
+            tableName = request.form["tableName"]
+            edit_data = request.form["edit_data"]
+            type = request.form["type"]
+            data = update_table_by_id(tableName, type, edit_data, id)
+            # update(table)
+            return json.dumps({"success":data})
+        elif operation == 'insert_table':
+            print 'yes'
+            # id = request.form["id"]
+            # tableName = request.form["tableName"]
+            # edit_data = request.form["edit_data"]
+            # type = request.form["type"]
+            # print id,tableName,edit_data,type
+            return json.dumps({"data":"success"})
         else:
             return 'index'
     else:
         return 'index'
+
+
 
 # 检索功能由第三方提供
 # 评论、分享功能由多说提供

@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>资讯管理学院</title>
+<link type="text/css" rel="stylesheet" href="/static/css/css1.css">
+<link type="text/css" rel="stylesheet" href="/static/css/main.css">
+<script src="/static/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+<script type="text/javascript">
+function mouseOver()
+{
+document.getElementById('b1').src ="images/niubi.jpg"
+}
+function mouseOut()
+{
+document.getElementById('b1').src ="images/lac3.jpg"
+}
+function CanShu(id,key){
+
+var show=document.getElementById(id).style.display;
+
+if(show=='none')
+
+{
+document.getElementById(id).style.display='block';
+}
+else{
+document.getElementById(id).style.display='none';
+}
+
+}
+function mOver2(obj)
+{
+obj.innerHTML="师生团队<br>师资力量<br>学生组织<br>学生党建 "
+}
+
+function mOut2(obj)
+{
+obj.innerHTML="师生团队"
+}
+function mOver1(obj)
+{
+obj.innerHTML="学院介绍<br>光辉历史<br>院徽<br>组织机构 "
+}
+
+function mOut1(obj)
+{
+obj.innerHTML="学院介绍"
+}
+function mOver3(obj)
+{
+obj.innerHTML="学科专业<br>学科介绍<br>本科专业<br>硕士专业<br>博士专业 "
+}
+
+function mOut3(obj)
+{
+obj.innerHTML="学科专业"
+}
+function mOver4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两学一做”专题党课学习顺利举行。2016/5/31 12:38:08";
+document.getElementById(id1).style.display='none';
+document.getElementById(id2).style.display='none';
+document.getElementById(id3).style.display='none';
+}
+
+function mOut4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两...";
+document.getElementById(id1).style.display='block';
+document.getElementById(id2).style.display='block';
+document.getElementById(id3).style.display='block';
+}
+</script>
+</head>
+<body>
+<div style="position:fixed; top:0; left:auto;width:100%;">
+<div class="headerbar">
+	<div class="topbar">
+	  <div class="comwidth">
+			<div class="logo fl">
+				<a href="im.sTon31.html">  <img src="/static/images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
+			</div>
+			<div class="menu fl">
+				<div class="suibian">
+				<span><h2 align="center" class="STYLE14" ><a href="#xueyuan"><div id="key1" class="bttt fl">办公信息</div></a>
+				<span><div class="icon flip fr" ><img src="/static/images/delta.png"alt="delta"style="padding-left:10px"></div></span>
+				</h2></a></span></div>
+			</div>
+			<div class="right fr">
+				<span><a href="images/arcore.jpg"> <img src="/static/images/En.png" alt="en" align="middle"style="padding-right:10px">
+				<span class="searchlogo"><a href="#"><img src="/static/images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
+			<input type="text" class="search_text STYLE28 STYLE13"style="background-color:rgba(189,195,199,0.5);border:none;"></a></span>
+	    	</div>
+	  </div>
+    </div>
+<div class="comwidth1">
+		<div id="caidan" class="caidan panel fl">
+			    <div class="caidan1 STYLE16">
+					<div class="cd3 fl" align="center"><a href="im.sTon31.html" class="a2">学院概况</a></div>
+					<div class="cd3 fl" align="center"><a href="#xinxi" class="a2">信息公告</a></div>
+					<div class="cd3 fl" align="center"><a href="#huodon" class="a2">学院活动</a></div>
+			    </div>
+				<div class="baixian"></div>
+				<div class="caidan2">
+					<div class="cd21 fl"\>
+						<div class="cdd STYLE19 fl">
+							<ul class="bg">
+								<li class="STYLE19" onClick="CanShu('chulai','one')" id="one"><a href="im.sTon31.html" class="a2">学院介绍</a></li>
+								<li class="STYLE19"><a href="teacher.html" class="a2">师生团队</a></li>
+								<li class="STYLE19" onClick="CanShu('chulai2','two')" id="two"><a href="#" class="a2">学院专业</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd22 fl">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="bangong.html" class="a2">办公信息</a></li>
+								<li class="STYLE19"><a href="#" class="a2">本科教学教务</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生工作</a></li>
+								<li class="STYLE19"><a href="#" class="a2">科研与研究生</a></li>
+								<li class="STYLE19"><a href="#" class="a2">对外交流合作</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd21 fr">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="#" class="a2">正在举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">即将举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">全部</a></li>
+							</ul>
+							</div>
+					</div>
+				</div>
+		</div>
+</div>
+</div>
+</div>
+<div class="topbar"></div>
+<div class="frame39">
+	<div class="comwidth">
+			<div class="pinglunfenxiang fl"style="position:fixed;">
+				<div class="pinglun fl"><a href="#"><img src="/static/images/plicon.png" alt="pinglunaaa"></a></div>
+				<div class="share fl">
+					<a href="#"><img src="/static/images/weixin2.png" alt="weixin"></a>
+					<a href="#"><img src="/static/images/MacQQ_logo.png" alt="qq" width="35px" height="35px"></a>
+					<a href="#"><img src="/static/images/weibo.png" alt="sina"></a>
+				</div>
+			</div>
+		<div class="wenzhang fl">
+			<div class="biaoti">
+				<div class="bt STYLE17" align="center">资讯管理学院“两学一做”专题党课学习顺利举行</div>
+				<div class="sbinfor STYLE39"align="center">中山大学资讯管理学院&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/5/31 12:38:08&nbsp;&nbsp;&nbsp;&nbsp;点击：[146]</div>
+			</div>
+			<div class="fengexian"></div>
+			<div class="zhengwen STYLE39 STYLE13">
+			<p>   2016年5月30日，响应学校“两学一做”学习教育活动号召，根据学院实施方案的安排，各教职工党支部、研究生党支部及本科生党支部联合举行“两学一做”专题学习活动，学院党委王琤书记应邀为全体师生党员上党课。会上，王琤书记以《从“上善若水”说开去》为题，分享自己的学习体会。王书记首先引用了《道德经》里的典故上善若水”，从水的美德入手，介绍了水刚柔并济、随物赋形等特点所承载的美德。介绍了习平总书记讲话中引用的一系列关于水的典故：鼓励人民群众发扬‘滴水穿石’般的韧劲和默默奉献的艰苦创业精神；发挥“海纳百川，有容乃大”的精神进行国际合作等。结合自身实际，希望在的各位党员可以学习“水”的美德，以刚柔并济的标准来要求自身，艰苦奋斗、无私坦荡，争取做一名如水一般纯净无暇的合格共产党员。王书记又从水的美德谈到了中山大学的办学理念。书记提出，教师、学生、职员，共同组成了大学这个学术共同体，也是托起大学这艘船并使其驶向学术彼岸的“水”。由此引申出“确立教授在学校务中的学术主导地位”和“将培育学生放在学校工作的核心位置”的理念。同时期望在座的各位教职工学习中山大学的名家大师们“以水为德”的品质，发挥滴水穿石的精神，不断追求更高的学术科研水平。最后，书记以罗俊校长提出的人才培养目标作为结束语，鼓励在座的所有学生党员能够学德才兼备，怀领袖气质，树家国情怀，以“上善若水”之境。最后，陈定权副院长、张洋教授、黄涛副书记和张靖常务副院长等教师党员先后围绕王铮书记的讲话与大在座党员畅谈想法与收获。各教工党支部、研究生党支部以及各本科生党支部也分别派代表就本次的党会主题进行了发言。大家纷纷表示从王书记的讲话中收获颇多，并将在未来的学习与生活中用心体悟水的美德，不断地严格要求自己，做一名优秀的共产党员。</p>
+			</div>
+			<!-- <div class="fengexian"></div>
+			<div class="bt2 STYLE20">评论</div>
+			<div class="cmblock">
+			<input type="text" class="nishuosha STYLE28 STYLE13">
+			<a href="#"><div class="fasong STYLE19" align="center">发送</div></a>
+			</div>
+			<div style="height:40px"></div>
+			<div class="fengexian"></div>
+			<div style="height:40px"></div>
+			<div class="biaoti STYLE39 STYLE13">
+				<div class="user fl">tang**</div>
+				<div class="wtf fl">好的好的知道了嗯就这样我现在有事等下会及时回复你的好的没错OK拜拜seeyou</div>
+				<div class="when fr">2016/6/2 22:01:34</div>
+			</div>
+			<div class="biaoti STYLE39 STYLE13">
+				<div class="user fl">wang**</div>
+				<div class="wtf fl">楼下SB</div>
+				<div class="when fr">2016/6/2 21:01:34</div>
+			</div> -->
+
+
+    <!-- 多说评论框 start -->
+    	<div class="ds-thread" data-thread-key="1" data-title="资讯管理学院“两学一做”专题党课学习顺利举行" data-url="http://im.st0n3.cn"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"imst0n3"};
+    	(function() {
+    		var ds = document.createElement('script');
+    		ds.type = 'text/javascript';ds.async = true;
+    		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    		ds.charset = 'UTF-8';
+    		(document.getElementsByTagName('head')[0]
+    		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+    	})();
+    	</script>
+    <!-- 多说公共JS代码 end -->
+
+		</div>
+		<div class="youbian fr">
+			<div class="youyishu fl"></div>
+				<div class="yigekuang fl">
+					<div class="xiaobt STYLE23">本类最新</div>
+					<div class="xian"></div>
+					<div class="sb">
+						<ul class="bg STYLE13">
+							<li class="STYLE39"><a href="#">资讯管理学院“两学一...</a></li>
+							<li class="STYLE39"><a href="#">转发：中共中山大学委...</a></li>
+							<li class="STYLE39"><a href="#">转发：中山大学关于教...</a></li>
+							<li class="STYLE39"><a href="#">资讯管理学院党委关于...</a></li>
+							<li class="STYLE39"><a href="#">转发：中山大学党委组...</a></li>
+							<li class="STYLE39"><a href="#">转发：人力资源管理处...</a></li>
+						</ul>
+					</div>
+					<div style="height:20px;"></div>
+					<div class="xiaobt STYLE23">热点信息</div>
+					<div class="xian"></div>
+					<div class="sb">
+						<ul class="bg STYLE13">
+							<li class="STYLE39"><a href="#">资讯管理学院“两学一...</a></li>
+							<li class="STYLE39"><a href="#">转发：中共中山大学委...</a></li>
+							<li class="STYLE39"><a href="#">转发：中山大学关于教...</a></li>
+							<li class="STYLE39"><a href="#">资讯管理学院党委关于...</a></li>
+							<li class="STYLE39"><a href="#">转发：中山大学党委组...</a></li>
+							<li class="STYLE39"><a href="#">转发：人力资源管理处...</a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<div class="bottombar">
+<div class="comwidth">
+	<div class="botlogo fl">
+		<div class="sysupic">
+			<img src="/static/images/sysu.jpg" alt="中山大学" style="padding-top:20px">
+		</div>
+		<!-- <div class="copyright">
+			<img src="/static/images/cpr.jpg" alt="copyright" style="padding-left:75px;">
+		</div> -->
+	</div>
+	<div class="yishushu fl"><div class="yishu"></div></div>
+	<div class="findus fl">
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">网站地图</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">关于我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">加入我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">广告协议</a></li>
+			</ul>
+		</div>
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">建议意见</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">院长热线</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">邮件建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="guanzhu fl">
+		<div class="STYLE13 STYLE39 STYLE26">关注我们</div>
+		<div class="erweima"><img src="/static/images/cross.png" alr="erweimama" width=100% height=100%></div>
+	</div>
+	<div class="blank2 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26">
+				  <div align="left">联系我们</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">电话：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">传真：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">邮件：imim@mail.sysu.edu.cn</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">广州市广州大学城外环东路132号</div>
+				</li>
+			</ul>
+	</div>
+</div>
+</div>
+</body>
+</html>

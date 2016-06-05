@@ -23,13 +23,30 @@
     <!-- Custom styles for this theme -->
     <link rel="stylesheet" href="/static/admin_assets/css/main.css">
     <!-- DataTables-->
-    <link rel="stylesheet" href="/static/admin_assets/plugins/dataTables/css/dataTables.css">
+    <!-- <link rel="stylesheet" href="/static/admin_assets/plugins/dataTables/css/dataTables.css"> -->
+    <link rel="stylesheet" href="/static/admin_assets/plugins/dataTables/css/datatables.min.css">
+    <link rel="stylesheet" href="/static/admin_assets/plugins/dataTables/css/editor.dataTables.min.css">
     <!-- Fonts -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
     <!-- Feature detection -->
     <script src="/static/admin_assets/js/modernizr-2.6.2.min.js"></script>
     <script src="/static/admin_assets/js/jquery-1.10.2.min.js"></script>
+
+
+    <!--Global JS-->
+    <script src="/static/admin_assets/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/admin_assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/admin_assets/plugins/waypoints/waypoints.min.js"></script>
+    <script src="/static/admin_assets/plugins/nanoScroller/jquery.nanoscroller.min.js"></script>
+    <script src="/static/admin_assets/js/application.js"></script>
+    <!--Page Leve JS -->
+    <script src="/static/admin_assets/plugins/dataTables/js/datatables.min.js"></script>
+    <script src="/static/admin_assets/plugins/dataTables/js/dataTables.editor.min.js"></script>
+    <!-- <script src="/static/admin_assets/plugins/dataTables/js/jquery.dataTables.js"></script>
+    <script src="/static/admin_assets/plugins/dataTables/js/dataTables.bootstrap.js"></script> -->
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="/static/admin_assets/js/html5shiv.js"></script>
@@ -200,11 +217,11 @@
                         <ul>
                             <li><a href="tables-basic.html">Basic Tables</a>
                             </li>
-                            <li class="active"><a href="show_tables">Data Tables</a>
+                            <li class="active"><a href="/admin/show_tables">Data Tables</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="sub-menu">
+                    <!-- <li class="sub-menu">
                         <a href="javascript:void(0);"><i class="fa fa fa-tasks"></i><span>Forms</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
                             <li><a href="forms-components.html">Components</a>
@@ -271,7 +288,7 @@
                             <li><a href="pages-500.html">500</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 
@@ -367,20 +384,7 @@
         </aside>
         <!--sidebar right end-->
     </section>
-    <!--Global JS-->
-    <script src="/static/admin_assets/js/jquery-1.10.2.min.js"></script>
-    <script src="/static/admin_assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/admin_assets/plugins/waypoints/waypoints.min.js"></script>
-    <script src="/static/admin_assets/plugins/nanoScroller/jquery.nanoscroller.min.js"></script>
-    <script src="/static/admin_assets/js/application.js"></script>
-    <!--Page Leve JS -->
-    <script src="/static/admin_assets/plugins/dataTables/js/jquery.dataTables.js"></script>
-    <script src="/static/admin_assets/plugins/dataTables/js/dataTables.bootstrap.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#example').dataTable();
-    });
-    </script>
+
 
 </body>
 

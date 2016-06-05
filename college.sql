@@ -17,14 +17,14 @@ create table articles(
 
 insert into users(username,password,email,role) VALUES('admin1','admin1','admin1@mail.sysu.edu.cn','1');
 insert into users(username,password,email,role) VALUES('user1','user1','user1@mail.sysu.edu.cn','0');
-insert into article(title,content,author,type) VALUES('title1','content1','1','bgxx');
-insert into article(title,content,author,type) VALUES('title2','content2','1','bgxx');
-insert into article(title,content,author,type) VALUES('title3','content3','1','bgxx');
-insert into article(title,content,author,type) VALUES('title4','content4','1','bkjxjw');
-insert into article(title,content,author,type) VALUES('title5','content5','1','bkjxjw');
-insert into article(title,content,author,type) VALUES('title6','content6','1','xsgz');
-insert into article(title,content,author,type) VALUES('title7','content7','1','xsgz');
-insert into article(title,content,author,type) VALUES('title8','content8','1','kyyyjs');
-insert into article(title,content,author,type) VALUES('title9','content9','1','kyyyjs');
-insert into article(title,content,author,type) VALUES('title10','content10','1','dwhzjl');
-insert into article(title,content,author,type) VALUES('title11','content11','1','dwhzjl');
+insert into articles(title,content,author,type) VALUES('title1','content1','1','bgxx');
+insert into articles(title,content,author,type) VALUES('title2','content2','1','bgxx');
+insert into articles(title,content,author,type) VALUES('title3','content3','1','bgxx');
+insert into articles(title,content,author,type) VALUES('title4','content4','1','bkjxjw');
+insert into articles(title,content,author,type) VALUES('title5','content5','1','bkjxjw');
+insert into articles(title,content,author,type) VALUES('title6','content6','1','xsgz');
+insert into articles(title,content,author,type) VALUES('title7','content7','1','xsgz');
+insert into articles(title,content,author,type) VALUES('title8','content8','1','kyyyjs');
+insert into articles(title,content,author,type) VALUES('title9','content9','1','kyyyjs');
+insert into articles(title,content,author,type) VALUES('title10','content10','1','dwhzjl');
+insert into articles(title,content,author,type) VALUES('title11','content11','1','dwhzjl');
