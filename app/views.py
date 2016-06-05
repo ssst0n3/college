@@ -20,7 +20,7 @@ def index():
 @app.route('/xxgg/')
 def xxgg():
     pagename = "信息公告"
-    articles,type,typeName = load_articles_all_type()
+    articles,type,typeName = init_articles_xxgg()
     # articles_json = json.dumps(articles)
     # return render_template("xinxigonggao.html", pagename = pagename, articles=articles_json)
     return render_template("xinxigonggao.html", pagename = pagename, articles=articles, type = type, typeName = typeName)
@@ -36,7 +36,7 @@ def xygk():
 @app.route('/article/<int:id>')
 def article(id=None):
     # 数据库操作，返回title， content等信息
-    article_info = show_article(id)
+    article_info = load_article_by_id(id)
 
     if id:
         title = article_info['title']
@@ -47,8 +47,20 @@ def article(id=None):
 
 # 后台管理路由
 @app.route('/admin/')
-def admin():
-    return '后台管理界面'
+@app.route('/admin/<string:operation>/')
+@app.route('/admin/<string:operation>/<string:tableName>')
+def admin(operation=None, tableName=None):
+    if operation:
+        if operation == 'show_tables':
+            if tableName:
+                exec ("records, columns = init_" + tableName + "_admin()")
+                return render_template("admin_templates/tables-data.html", tableName = tableName, records = records, columns = columns)
+            else:
+                return render_template("admin_templates/tables-data.html")
+        else:
+            return 'index'
+    else:
+        return 'index'
 
 # 检索功能由第三方提供
 # 评论、分享功能由多说提供
