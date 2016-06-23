@@ -1,11 +1,13 @@
 #-*- coding:utf-8 -*-
 
-import MySQLdb
+import MySQLdb,sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def mysql_con():
     global db, cursor
     # 打开数据库连接
-    db = MySQLdb.connect("localhost","root","","college")
+    db = MySQLdb.connect("localhost","root","","college",charset="utf8")
     # 使用cursor()方法获取操作游标
     cursor = db.cursor()
 
@@ -44,40 +46,57 @@ def get_columns_of_table():
     return columns_all_tables
 
 # update更新数据库
-def update_table_by_id(tableName, column, edit_data, id):
-    if column != 'id':
-        mysql_con()
-        sql = "UPDATE " + tableName + " SET " + column + "='" + edit_data + "' WHERE id=" + id + ";"
-        print sql
-        cursor.execute(sql)
+def update_table_by_id(tableName, edit_data, id):
+    mysql_con()
+    sql = "UPDATE " + tableName + " SET " + edit_data + " WHERE id=" + id + ";"
+    print sql
+    cursor.execute(sql)
 
-        db.commit()
-        mysql_clo()
-        initData()
-        return 'success'
-    else:
-        return 'id cannot be changed'
+    db.commit()
+    mysql_clo()
+    initData()
+    return 'update success'
 
-# 按照id查询文章
-def load_article_by_id(id):
+# 按照id删除数据
+def delete_table_by_id(tableName, id):
+    mysql_con()
+    sql = "DELETE FROM " + tableName + " WHERE id = " + id;
+    print sql
+    cursor.execute(sql)
+
+    db.commit()
+    mysql_clo()
+    initData()
+    return 'delete success'
+
+# insert插入数据
+def insert_table(tableName, edit_data):
+    mysql_con()
+    sql = "INSERT INTO " + tableName + " " + edit_data
+    print sql
+    cursor.execute(sql)
+
+    db.commit()
+    mysql_clo()
+    initData()
+    return 'create success'
+
+
+# 按照id查询表格
+def load_table_by_id(tableName, id):
     mysql_con()
 
-    sql = "SELECT * FROM articles WHERE id = " + str(id)
+    sql = "SELECT * FROM " + tableName + " WHERE id = " + str(id)
     cursor.execute(sql)
 
     result = cursor.fetchone()
-
     mysql_clo()
 
-    article = []
-    id = result[0]
-    title = result[1]
-    content = result[2]
-    author = result[3]
-    type = result[4]
-    article = {'id':id,'title':title,'content':content,'author':author,'type':type}
-
-    return article
+    record = {}
+    for i in range(len(result)):
+        exec(columns_all_tables_init[tableName][i] + " = '" + str(result[i]) + "'")
+        exec("record['" + columns_all_tables_init[tableName][i]+ "'] = " + columns_all_tables_init[tableName][i])
+    return record
 
 # 按照id为序查找所有数据
 def load_table_order_by_id(tableName):
@@ -155,4 +174,4 @@ def initData():
 initData()
 
 if __name__ == "__main__":
-    print init_load_table_order_by_id_users()
+    print init_load_table_order_by_id_articles()

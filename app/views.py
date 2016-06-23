@@ -5,16 +5,16 @@ from flask import json, request
 from models import *
 
 reload(sys)
-sys.setdefaultencoding('utf8')
+sys.setdefaultencoding('utf-8')
 
 from flask import render_template
 from app import app
 
-# 首页
-@app.route('/')
-@app.route('/index')
-def index():
-    return 'Hello, World! This is a index page! But our designer have not give me the index page! <br> <a href="xxgg">信息公告</a> &emsp; <a href="xygk">学院概况</a> &emsp; <a href="admin">后台管理</a>'
+# # 首页
+# @app.route('/')
+# @app.route('/index')
+# def index():
+#     return 'Hello, World! This is a index page! But our designer have not give me the index page! <br> <a href="xxgg">信息公告</a> &emsp; <a href="xygk">学院概况</a> &emsp; <a href="admin">后台管理</a>'
 
 # 信息公告页
 @app.route('/xxgg/')
@@ -27,15 +27,17 @@ def xxgg():
 
 
 
-# 信息公告页
-@app.route('/test/')
-def test():
-    # pagename = "信息公告"
-    # articles,type,typeName = load_articles_classfied_by_type()
-    # articles_json = json.dumps(articles)
-    # return render_template("xinxigonggao.html", pagename = pagename, articles=articles_json)
-    return render_template("bangong.html")
+@app.route('/index/')
+def index():
+    return render_template("index.html")
 
+@app.route('/teacher/')
+@app.route('/teacher/<int:id>')
+def teacher(id=None):
+    if id == 1:
+        return render_template("caoshujin.html")
+    else:
+        return render_template("teacher.html")
 
 
 
@@ -50,7 +52,7 @@ def xygk():
 @app.route('/article/<int:id>')
 def article(id=None):
     # 数据库操作，返回title， content等信息
-    article_info = load_article_by_id(id)
+    article_info = load_table_by_id("articles", id)
 
     if id:
         title = article_info['title']
@@ -62,32 +64,64 @@ def article(id=None):
 # 后台管理路由
 @app.route('/admin/')
 @app.route('/admin/<string:operation>/', methods=['GET','POST'])
-@app.route('/admin/<string:operation>/<string:tableName>')
+@app.route('/admin/<string:operation>/<string:tableName>', methods=['GET','POST'])
 def admin(operation=None, tableName=None, action="show"):
     if operation:
         if operation == 'show_tables':
             if tableName == 'users' or tableName == 'articles':
                 exec ("records, columns = init_load_table_order_by_id_" + tableName + "()")
-                return render_template("admin_templates/tables-data.html", tableName = tableName, records = records, columns = columns)
+                return render_template("admin_templates/tables-data.html", tableName = tableName, records = records, columns = columns).encode("utf-8")
             else:
                 return render_template("admin_templates/tables-data.html")
+        elif operation == 'load_data':
+            exec ("records, columns = init_load_table_order_by_id_" + tableName + "()")
+            for i in range(len(records)):
+                records[i]["DT_RowId"]="row_"+str(records[i]["id"])
+            return json.dumps({"data":records})
         elif operation == 'edit_table':
-            # inputData = request.args.get('d1', None, type=string)
-            id = request.form["id"]
-            tableName = request.form["tableName"]
-            edit_data = request.form["edit_data"]
-            type = request.form["type"]
-            data = update_table_by_id(tableName, type, edit_data, id)
-            # update(table)
-            return json.dumps({"success":data})
-        elif operation == 'insert_table':
-            print 'yes'
-            # id = request.form["id"]
-            # tableName = request.form["tableName"]
-            # edit_data = request.form["edit_data"]
-            # type = request.form["type"]
-            # print id,tableName,edit_data,type
-            return json.dumps({"data":"success"})
+            data_submitted = dict(request.form)
+            action = data_submitted['action'][0]
+            del data_submitted['action']
+            rows = []
+            data_recieve = {}
+            for k,d in data_submitted.items():
+                DT_RowId = k[k.find('[')+1:k.find(']')]
+                key = k[k.find(']')+2:-1]
+                data = "".join(d)
+                if DT_RowId not in rows:
+                    rows.append(DT_RowId)
+                    if action != 'create':
+                        exec("data_recieve['" + DT_RowId + "'] = " + str(load_table_by_id(tableName, DT_RowId[4:])))
+                        exec("data_recieve['" + DT_RowId + "']['DT_RowId'] = '" + DT_RowId + "'")
+                    else:
+                        exec("data_recieve['" + DT_RowId + "'] = {}")
+                exec("data_recieve['" + DT_RowId + "']['" + key + "'] = '" + data + "'")
+
+            data_response = []
+            if action == 'edit':
+                for k,d in data_recieve.items():
+                    data_response.append(d)
+                    edit_data = ""
+                    for k2,d2 in d.items():
+                        if k2 != 'id' and k2 != 'DT_RowId':
+                            edit_data = edit_data + k2 + '=' + "'" + d2 + "',"
+                    edit_data = edit_data[:-1]
+                    print update_table_by_id(tableName, edit_data, k[4:])
+            elif action == 'remove':
+                for DT_RowId in rows:
+                    delete_table_by_id(tableName, DT_RowId[4:])
+            elif action == 'create':
+                columns = ""
+                values = ""
+                for k,d in data_recieve['0'].items():
+                    columns = columns + k + ','
+                    values = values + d + ','
+                edit_data = "(" + columns[:-1] + ") VALUES (" + values[:-1] + ")"
+                insert_table(tableName, edit_data)
+                # print data_recieve
+                data_response.append(data_recieve['0'])
+
+            return json.dumps({"data":data_response})
         else:
             return 'index'
     else:

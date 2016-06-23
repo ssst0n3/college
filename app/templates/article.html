@@ -1,23 +1,311 @@
-<!DOCTYPE>
+﻿<!DOCTYPE html>
 <html>
-<head><head>
+<head>
+<meta charset="utf=8">
+<title>资讯管理学院</title>
+<link type="text/css" rel="stylesheet" href="/static/css/css1.css">
+<link type="text/css" rel="stylesheet" href="/static/css/main.css">
+<script src="/static/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+<script type="text/javascript">
+function mouseOver()
+{
+document.getElementById('b1').src ="images/niubi.jpg"
+}
+function mouseOut()
+{
+document.getElementById('b1').src ="images/lac3.jpg"
+}
+function CanShu(id,key){
+
+var show=document.getElementById(id).style.display;
+
+if(show=='none')
+
+{
+document.getElementById(id).style.display='block';
+}
+else{
+document.getElementById(id).style.display='none';
+}
+
+}
+function mOver2(obj)
+{
+obj.innerHTML="师生团队<br>师资力量<br>学生组织<br>学生党建 "
+}
+
+function mOut2(obj)
+{
+obj.innerHTML="师生团队"
+}
+function mOver1(obj)
+{
+obj.innerHTML="学院介绍<br>光辉历史<br>院徽<br>组织机构 "
+}
+
+function mOut1(obj)
+{
+obj.innerHTML="学院介绍"
+}
+function mOver3(obj)
+{
+obj.innerHTML="学科专业<br>学科介绍<br>本科专业<br>硕士专业<br>博士专业 "
+}
+
+function mOut3(obj)
+{
+obj.innerHTML="学科专业"
+}
+function mOver4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两学一做”专题党课学习顺利举行。2016/5/31 12:38:08";
+document.getElementById(id1).style.display='none';
+document.getElementById(id2).style.display='none';
+document.getElementById(id3).style.display='none';
+}
+
+function mOut4(id1,id2,id3,obj)
+{
+obj.innerHTML="资讯管理学院“两...";
+document.getElementById(id1).style.display='block';
+document.getElementById(id2).style.display='block';
+document.getElementById(id3).style.display='block';
+}
+</script>
+</head>
 <body>
-
-<h1>
-{% if title %}
-  {{ title }}
-{% else %}
-  数据库错误
-{% endif %}
-</h1>
-
-<div class="article_content">
-{% if content %}
-  {{ content }}
-{% else %}
-  数据库错误
-{% endif %}
+<div style="position:fixed; top:0; left:auto;width:100%;">
+<div class="headerbar">
+	<div class="topbar">
+	  <div class="comwidth">
+			<div class="logo fl">
+				<a href="/index">  <img src="/static/images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
+			</div>
+			<div class="menu fl">
+				<div class="suibian">
+				<span><h2 align="center" class="STYLE14" ><a href="#xueyuan"><div id="key1" class="bttt fl">办公信息</div></a>
+				<span><div class="icon flip fr" ><img src="/static/images/delta.png"alt="delta"style="padding-left:10px"></div></span>
+				</h2></a></span></div>
+			</div>
+			<div class="right fr">
+				<span><a href="images/arcore.jpg"> <img src="/static/images/En.png" alt="en" align="middle"style="padding-right:10px">
+				<span class="searchlogo"><a href="#"><img src="/static/images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
+			<input type="text" class="search_text STYLE28 STYLE13"style="background-color:rgba(189,195,199,0.5);border:none;"></a></span>
+	    	</div>
+	  </div>
+    </div>
+<div class="comwidth1">
+		<div id="caidan" class="caidan panel fl">
+			    <div class="caidan1 STYLE16">
+					<div class="cd3 fl" align="center"><a href="/index" class="a2">学院概况</a></div>
+					<div class="cd3 fl" align="center"><a href="#xinxi" class="a2">信息公告</a></div>
+					<div class="cd3 fl" align="center"><a href="#huodon" class="a2">学院活动</a></div>
+			    </div>
+				<div class="baixian"></div>
+				<div class="caidan2">
+					<div class="cd21 fl"\>
+						<div class="cdd STYLE19 fl">
+							<ul class="bg">
+								<li class="STYLE19" onClick="CanShu('chulai','one')" id="one"><a href="/index" class="a2">学院介绍</a></li>
+								<li class="STYLE19"><a href="teacher.html" class="a2">师生团队</a></li>
+								<li class="STYLE19" onClick="CanShu('chulai2','two')" id="two"><a href="#" class="a2">学院专业</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd22 fl">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="/article/1" class="a2">办公信息</a></li>
+								<li class="STYLE19"><a href="#" class="a2">本科教学教务</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生工作</a></li>
+								<li class="STYLE19"><a href="#" class="a2">科研与研究生</a></li>
+								<li class="STYLE19"><a href="#" class="a2">对外交流合作</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd21 fr">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="#" class="a2">正在举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">即将举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">全部</a></li>
+							</ul>
+							</div>
+					</div>
+				</div>
+		</div>
 </div>
+</div>
+</div>
+<div class="topbar"></div>
+<div class="frame39">
+	<div class="comwidth">
+			<div class="pinglunfenxiang fl" style="position:fixed;display:none">
+				<div class="pinglun fl"><a href="#"><img src="/static/images/plicon.png" alt="pinglunaaa"></a></div>
+				<div class="share fl">
+					<a href="#"><img src="/static/images/weixin2.png" alt="weixin"></a>
+					<a href="#"><img src="/static/images/MacQQ_logo.png" alt="qq" width="35px" height="35px"></a>
+					<a href="#"><img src="/static/images/weibo.png" alt="sina"></a>
+				</div>
+			</div>
+		<div class="wenzhang fl">
+			<div class="biaoti">
+				<div class="bt STYLE17" align="center">{% if title %}{{ title }}{% else %}数据库错误{% endif %}</div>
+				<div class="sbinfor STYLE39"align="center">中山大学资讯管理学院&nbsp;&nbsp;&nbsp;&nbsp;发布时间：2016/5/31 12:38:08&nbsp;&nbsp;&nbsp;&nbsp;点击：[146]</div>
+			</div>
+			<div class="fengexian"></div>
+			<div class="zhengwen STYLE39 STYLE13">
+			<p>{% if content %}{{ content }}{% else %}数据库错误{% endif %}</p>
+			</div>
+			<!-- <div class="fengexian"></div>
+			<div class="bt2 STYLE20">评论</div>
+			<div class="cmblock">
+			<input type="text" class="nishuosha STYLE28 STYLE13">
+			<a href="#"><div class="fasong STYLE19" align="center">发送</div></a>
+			</div>
+			<div style="height:40px"></div>
+			<div class="fengexian"></div>
+			<div style="height:40px"></div>
+			<div class="biaoti STYLE39 STYLE13">
+				<div class="user fl">tang**</div>
+				<div class="wtf fl">好的好的知道了嗯就这样我现在有事等下会及时回复你的好的没错OK拜拜seeyou</div>
+				<div class="when fr">2016/6/2 22:01:34</div>
+			</div>
+			<div class="biaoti STYLE39 STYLE13">
+				<div class="user fl">wang**</div>
+				<div class="wtf fl">楼下SB</div>
+				<div class="when fr">2016/6/2 21:01:34</div>
+			</div> -->
 
+
+    <!-- 多说评论框 start -->
+    	<div class="ds-thread" data-thread-key="1" data-title="{{title}}" data-url="http://im.st0n3.cn/article/1"></div>
+    <!-- 多说评论框 end -->
+
+
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"imst0n3"};
+    	(function() {
+    		var ds = document.createElement('script');
+    		ds.type = 'text/javascript';ds.async = true;
+    		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    		ds.charset = 'UTF-8';
+    		(document.getElementsByTagName('head')[0]
+    		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+    	})();
+    	</script>
+    <!-- 多说公共JS代码 end -->
+
+    <div class="ds-share" data-thread-key="1" data-title="{{title}}" data-images="http://im/st0n3.cn/article/1" data-content="{{title}}"
+        data-url="http://im.st0n3.cn/article/1">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+
+		</div>
+		<div class="youbian fr">
+			<div class="youyishu fl"></div>
+				<div class="yigekuang fl">
+					<div class="xiaobt STYLE23">本类最新</div>
+					<div class="xian"></div>
+					<div class="sb">
+						<ul class="bg STYLE13">
+							<li class="STYLE39"><a href="/article/1">资讯管理学院“两学一...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中共中山大学委...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中山大学关于教...</a></li>
+							<li class="STYLE39"><a href="/article/1">资讯管理学院党委关于...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中山大学党委组...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：人力资源管理处...</a></li>
+						</ul>
+					</div>
+					<div style="height:20px;"></div>
+					<div class="xiaobt STYLE23">热点信息</div>
+					<div class="xian"></div>
+					<div class="sb">
+						<ul class="bg STYLE13">
+							<li class="STYLE39"><a href="/article/1">资讯管理学院“两学一...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中共中山大学委...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中山大学关于教...</a></li>
+							<li class="STYLE39"><a href="/article/1">资讯管理学院党委关于...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：中山大学党委组...</a></li>
+							<li class="STYLE39"><a href="/article/1">转发：人力资源管理处...</a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<div class="bottombar">
+<div class="comwidth">
+	<div class="botlogo fl">
+		<div class="sysupic">
+			<img src="/static/images/sysu.jpg" alt="中山大学" style="padding-top:20px">
+		</div>
+		<!-- <div class="copyright">
+			<img src="/static/images/cpr.jpg" alt="copyright" style="padding-left:75px;">
+		</div> -->
+	</div>
+	<div class="yishushu fl"><div class="yishu"></div></div>
+	<div class="findus fl">
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">网站地图</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">关于我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">加入我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">广告协议</a></li>
+			</ul>
+		</div>
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">建议意见</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">院长热线</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">邮件建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="guanzhu fl">
+		<div class="STYLE13 STYLE39 STYLE26">关注我们</div>
+		<div class="erweima"><img src="/static/images/cross.png" alr="erweimama" width=100% height=100%></div>
+	</div>
+	<div class="blank2 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26">
+				  <div align="left">联系我们</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">电话：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">传真：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">邮件：imim@mail.sysu.edu.cn</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">广州市广州大学城外环东路132号</div>
+				</li>
+			</ul>
+	</div>
+</div>
+</div>
 </body>
 </html>

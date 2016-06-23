@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf=8">
 <title>资讯管理学院</title>
-<link type="text/css" rel="stylesheet" href="style/css1.css">
-<link type="text/css" rel="stylesheet" href="style/main.css">
+<link type="text/css" rel="stylesheet" href="/static/css/css1.css">
+<link type="text/css" rel="stylesheet" href="/static/css/main.css">
 <script src="jquery/jquery-1.11.1.min.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 $(document).ready(function(){
 $(".flip").click(function(){
     $(".panel").slideToggle("slow");
@@ -16,11 +16,11 @@ $(".flip").click(function(){
 <script type="text/javascript">
 function mouseOver()
 {
-document.getElementById('b1').src ="images/niubi.jpg"
+document.getElementById('b1').src ="/static/images/niubi.jpg"
 }
 function mouseOut()
 {
-document.getElementById('b1').src ="images/lac3.jpg"
+document.getElementById('b1').src ="/static/images/lac3.jpg"
 }
 function CanShu(id,key){
 
@@ -86,25 +86,25 @@ document.getElementById(id3).style.display='block';
 	<div class="topbar">
 	  <div class="comwidth">
 			<div class="logo fl">
-				<a href="im.sTon31.html">  <img src="images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
+				<a href="/index">  <img src="/static/images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
 			</div>
 			<div class="menu fl">
 				<div class="suibian">
 				<span><h2 align="center" class="STYLE14" ><a href="#xueyuan"><div id="key1" class="bttt fl">师资力量</div></a>
-				<span><div class="icon flip fr" ><img src="images/delta.png"alt="delta"style="padding-left:10px"></div></span>
+				<span><div class="icon flip fr" ><img src="/static/images/delta.png"alt="delta"style="padding-left:10px"></div></span>
 				</h2></a></span></div>
 			</div>
 			<div class="right fr">
-				<span><a href="images/arcore.jpg"> <img src="images/En.png" alt="en" align="middle"style="padding-right:10px">	
-				<span class="searchlogo"><a href="#"><img src="images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
+				<span><a href="/static/images/arcore.jpg"> <img src="/static/images/En.png" alt="en" align="middle"style="padding-right:10px">
+				<span class="searchlogo"><a href="#"><img src="/static/images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
 			<input type="text" class="search_text STYLE28 STYLE13"style="background-color:rgba(189,195,199,0.5);border:none;"></a></span>
-	    	</div>		
+	    	</div>
 	  </div>
     </div>
-<div class="comwidth1">  
+<div class="comwidth1">
 		<div id="caidan" class="caidan panel fl">
 			    <div class="caidan1 STYLE16">
-					<div class="cd3 fl" align="center"><a href="im.sTon31.html" class="a2">学院概况</a></div>
+					<div class="cd3 fl" align="center"><a href="/index" class="a2">学院概况</a></div>
 					<div class="cd3 fl" align="center"><a href="#xinxi" class="a2">信息公告</a></div>
 					<div class="cd3 fl" align="center"><a href="#huodon" class="a2">学院活动</a></div>
 			    </div>
@@ -113,24 +113,24 @@ document.getElementById(id3).style.display='block';
 					<div class="cd21 fl"\>
 						<div class="cdd STYLE19 fl">
 							<ul class="bg">
-								<li class="STYLE19"><a href="im.sTon31.html" class="a2">学院介绍</a></li>
+								<li class="STYLE19"><a href="/index" class="a2">学院介绍</a></li>
 								<li class="STYLE19" onClick="CanShu('chulai','one')" id="one"><a href="#" class="a2" >师生团队</a></li>
 								<li class="STYLE19"><a href="#" class="a2">学院专业</a></li>
 							</ul>
 							</div>
 						<div id="chulai" class="zk1 fr">
-							<img src="images/shenme.png" style="margin-top:50px;padding-right:10px;">
+							<img src="/static/images/shenme.png" style="margin-top:50px;padding-right:10px;">
 							<ul class="bg fr">
 								<li class="STYLE19"><a href="#" class="a2">师资力量</a></li>
 								<li class="STYLE19"><a href="#" class="a2">学生组织</a></li>
 								<li class="STYLE19"><a href="#" class="a2">学生党建</a></li>
 							</ul>
 						</div>
-					</div>	
+					</div>
 					<div class="cd22 fl">
 						<div class="cdd1 STYLE19" align="center">
 							<ul class="bg">
-								<li class="STYLE19"><a href="bangong.html" class="a2">办公信息</a></li>
+								<li class="STYLE19"><a href="/article/1" class="a2">办公信息</a></li>
 								<li class="STYLE19"><a href="#" class="a2">本科教学教务</a></li>
 								<li class="STYLE19"><a href="#" class="a2">学生工作</a></li>
 								<li class="STYLE19"><a href="#" class="a2">科研与研究生</a></li>
@@ -150,23 +150,23 @@ document.getElementById(id3).style.display='block';
 				</div>
 		</div>
 </div>
-</div>	
+</div>
 </div>
 <div class="topbar"></div>
-<div class="frame2">	
+<div class="frame2">
 	<div class="picin">
 		<div class="xinxi fl">
-			<img src="images/xinxi.jpg" alt="information">
+			<img src="/static/images/xinxi.jpg" alt="information">
 		</div>
 		<div class="caoshujin fl">
-			<img src="images/caoshujin.jpg" alt="cao">
+			<img src="/static/images/caoshujin.jpg" alt="cao">
 		</div>
 	</div>
 	<div class="infor">
 		<div class="xinxi fl">
 			<div class="geren STYLE15 STYLE27">
 				<ul class="fenlei fl">
-					<li><a href="#" class="active">个人简历</a><div class="tiao"><img src="images/tiao.png" alt="tiao"></div></li>
+					<li><a href="#" class="active">个人简历</a><div class="tiao"><img src="/static/images/tiao.png" alt="tiao"></div></li>
 					<li><a href="#">学术专长</a></li>
 					<li><a href="#">研究方向</a></li>
 					<li><a href="#">研究经历</a></li>
@@ -186,13 +186,13 @@ document.getElementById(id3).style.display='block';
 			<h1 align="left" class="STYLE14 STYLE13"><strong>曹树金教授</strong></h1>
 		<ul class="STYLE12 STYLE27 STYLE28">
 			<li class="STYLE13 STYLE26">
-				  <div align="left"><img src="images/circle.png"><i class="dian"></i>caosj@mail.sysu.edu.<br><i class="dian1"></i>cn</div>
+				  <div align="left"><img src="/static/images/circle.png"><i class="dian"></i>caosj@mail.sysu.edu.<br><i class="dian1"></i>cn</div>
 			</li>
 			<li class="STYLE13 STYLE26">
-				  <div align="left"><img src="images/circle.png"><i class="dian"></i>020-84035076</div>
+				  <div align="left"><img src="/static/images/circle.png"><i class="dian"></i>020-84035076</div>
 			</li>
 			<li>
-				  <div align="left" class="STYLE13"><img src="images/circle.png"><i class="dian"></i><strong>广州大学城外环东路1<br><i class="dian1"></i>32号中山大学北学院<br><i class="dian1"></i>楼B栋资讯管理学院（<br><i class="dian1"></i>邮编：510006）</strong></div>
+				  <div align="left" class="STYLE13"><img src="/static/images/circle.png"><i class="dian"></i><strong>广州大学城外环东路1<br><i class="dian1"></i>32号中山大学北学院<br><i class="dian1"></i>楼B栋资讯管理学院（<br><i class="dian1"></i>邮编：510006）</strong></div>
 		  </li>
 	    </ul>
 	  </div>
@@ -202,12 +202,12 @@ document.getElementById(id3).style.display='block';
 <div class="comwidth">
 	<div class="botlogo fl">
 		<div class="sysupic">
-			<img src="images/sysu.jpg" alt="中山大学" style="padding-top:20px">
+			<img src="/static/images/sysu.jpg" alt="中山大学" style="padding-top:20px">
 		</div>
 		<div class="copyright">
-			<img src="images/cpr.jpg" alt="copyright" style="padding-left:75px;">
-		</div>		
-	</div>	
+			<img src="/static/images/cpr.jpg" alt="copyright" style="padding-left:75px;">
+		</div>
+	</div>
 	<div class="yishushu fl"><div class="yishu"></div></div>
 	<div class="findus fl">
 		<div class="blank1 fl">
@@ -228,7 +228,7 @@ document.getElementById(id3).style.display='block';
 	</div>
 	<div class="guanzhu fl">
 		<div class="STYLE13 STYLE39 STYLE26">关注我们</div>
-		<div class="erweima"><img src="images/cross.png" alr="erweimama" width=100% height=100%></div>
+		<div class="erweima"><img src="/static/images/cross.png" alr="erweimama" width=100% height=100%></div>
 	</div>
 	<div class="blank2 fl">
 			<ul class="oheeh">
