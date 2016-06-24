@@ -121,9 +121,9 @@ def admin(operation=None, tableName=None, action="show"):
 
             return json.dumps({"data":data_response})
         else:
-            return 'index'
+            return render_template("admin_templates/tables-data.html")
     else:
-        return 'index'
+        return render_template("admin_templates/tables-data.html")
 
 # 检索功能由第三方提供
 # 评论、分享功能由多说提供

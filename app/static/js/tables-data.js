@@ -44,6 +44,7 @@ $(document).ready(function() {
         selector: 'td:first-child'
       },
       buttons:[
+        'copy','excel','pdf',
         {extend: 'create', editor: editor},
         {extend: 'edit', editor: editor},
         {extend: 'remove', editor: editor},
