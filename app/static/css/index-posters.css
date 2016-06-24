@@ -1,0 +1,14 @@
+.posters{
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+}
+.poster{
+  width: 33%;
+  height: 100%;
+  text-align: center;
+}
+.poster img{
+  width: 95%;
+  height: 95%;
+}

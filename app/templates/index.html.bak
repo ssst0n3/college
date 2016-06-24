@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>资讯管理学院</title>
+<link type="text/css" rel="stylesheet" href="/static/css/css1.css">
+<link type="text/css" rel="stylesheet" href="/static/css/main.css">
+<link type="text/css" rel="stylesheet" href="/static/css/st0n3.css">
+<script src="/static/jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".flip").click(function(){
+    $(".panel").slideToggle("slow");
+  });
+});
+</script>
+<script>window.onscroll=function(){
+
+//变量t就是滚动条滚动时，到顶部的距离
+var t =document.documentElement.scrollTop||document.body.scrollTop;
+
+var left =document.getElementById("key1");
+if( t >=630&&t<=1255) {
+
+     left.innerHTML="信息公告";
+
+}if( t >=1255){    left.innerHTML="学院活动";
+
+   }if(t<630){left.innerHTML="学院概况";}}
+</script>
+<script type="text/javascript">
+function mouseOver()
+{
+document.getElementById('b1').src ="/static/images/niubi.jpg"
+}
+function mouseOut()
+{
+document.getElementById('b1').src ="/static/images/lac3.jpg"
+}
+function CanShu(id,key){
+
+var show=document.getElementById(id).style.display;
+
+if(show=='none')
+
+{
+document.getElementById(id).style.display='block';
+}
+else{
+document.getElementById(id).style.display='none';
+}
+
+}
+function mOver2(obj)
+{
+obj.innerHTML="师生团队<br>师资力量<br>学生组织<br>学生党建 "
+}
+
+function mOut2(obj)
+{
+obj.innerHTML="师生团队"
+}
+function mOver1(obj)
+{
+obj.innerHTML="学院介绍<br>光辉历史<br>院徽<br>组织机构 "
+}
+
+function mOut1(obj)
+{
+obj.innerHTML="学院介绍"
+}
+function mOver3(obj)
+{
+obj.innerHTML="学科专业<br>学科介绍<br>本科专业<br>硕士专业<br>博士专业 "
+}
+
+function mOut3(obj)
+{
+obj.innerHTML="学科专业"
+}
+function mOver4(obj)
+{
+obj.innerHTML="资讯管理学院“两学一做”专题党课学习顺利举行。2016/5/31 12:38:08";
+$(obj).parent().attr("style","color:#fff;background-color:#000;");
+}
+
+
+
+function mOut4(obj)
+{
+obj.innerHTML="资讯管理学院“两...";
+$(obj).parent().attr("style","");
+}
+</script>
+</head>
+<body>
+<div style="position:fixed; top:0; left:auto;width:100%;">
+<div class="headerbar">
+	<div class="topbar">
+	  <div class="comwidth">
+			<div class="logo fl">
+				<a href="/index">  <img src="/static/images/sysu.jpg" alt="中山大学" align="absmiddle"></a>
+			</div>
+			<div class="menu fl">
+				<div class="suibian">
+				<span><h2 align="center" class="STYLE14" ><a href="#xueyuan"><div id="key1" class="bttt fl">学院概况</div></a>
+				<span><div class="icon flip fr" ><img src="/static/images/delta.png"alt="delta"style="padding-left:10px"></div></span>
+				</h2></a></span></div>
+			</div>
+			<div class="right fr">
+				<span><a href="images/arcore.jpg"> <img src="/static/images/En.png" alt="en" align="middle"style="padding-right:10px">
+				<span class="searchlogo"><a href="#"><img src="/static/images/searicon.png" alt="搜索icon" align="middle"style="padding-right:10px"></a></span>
+			<input type="text" class="search_text STYLE28 STYLE13"style="background-color:rgba(189,195,199,0.5);border:none;"></a></span>
+	    	</div>
+	  </div>
+  </div>
+  <div class="comwidth1">
+		<div id="caidan" class="caidan panel fl">
+			    <div class="caidan1 STYLE16">
+					<div class="cd3 fl" align="center"><a href="#xueyuan" class="a2">学院概况</a></div>
+					<div class="cd3 fl" align="center"><a href="#xinxi" class="a2">信息公告</a></div>
+					<div class="cd3 fl" align="center"><a href="#huodon" class="a2">学院活动</a></div>
+			    </div>
+				<div class="baixian"></div>
+				<div class="caidan2">
+					<div class="cd21 fl"\>
+						<div class="cdd STYLE19 fl">
+							<ul class="bg">
+								<li class="STYLE19" onClick="CanShu('chulai','one')" id="one"><a href="#" class="a2">学院介绍</a></li>
+								<li class="STYLE19"><a href="/teacher" class="a2">师生团队</a></li>
+								<li class="STYLE19" onClick="CanShu('chulai2','two')" id="two"><a href="#" class="a2">学院专业</a></li>
+							</ul>
+							</div>
+						<div id="chulai" class="zk1 fr">
+							<img src="/static/images/shenme.png" style="margin-top:10px;padding-right:10px;">
+							<ul class="bg fr">
+								<li class="STYLE19"><a href="#" class="a2">光辉历史</a></li>
+								<li class="STYLE19"><a href="#" class="a2">院徽</a></li>
+								<li class="STYLE19"><a href="#" class="a2">组织机构</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="cd22 fl">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="/article/1" class="a2">办公信息</a></li>
+								<li class="STYLE19"><a href="#" class="a2">本科教学教务</a></li>
+								<li class="STYLE19"><a href="#" class="a2">学生工作</a></li>
+								<li class="STYLE19"><a href="#" class="a2">科研与研究生</a></li>
+								<li class="STYLE19"><a href="#" class="a2">对外交流合作</a></li>
+							</ul>
+							</div>
+					</div>
+					<div class="cd21 fr">
+						<div class="cdd1 STYLE19" align="center">
+							<ul class="bg">
+								<li class="STYLE19"><a href="#" class="a2">正在举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">即将举行</a></li>
+								<li class="STYLE19"><a href="#" class="a2">全部</a></li>
+							</ul>
+							</div>
+					</div>
+				</div>
+		</div>
+  </div>
+</div>
+</div>
+<a name="xueyuan"><div class="topbar"></div></a>
+
+
+<div class="home">
+	<div class="comwidth">
+		<div class="dllogo"><a href="images/dognannv.jpg"><img src="/static/images/dlicon.png" alt="下载icon" align="middle" style="padding-top:20px"></a>
+		</div>
+		<div class="nav" >
+			<div class="navg1 fl STYLE14" align="center"onmouseover="mOver1(this)" onMouseOut="mOut1(this)">学院介绍</div>
+			<div class="navg1 fl STYLE14" align="center"onmouseover="mOver2(this)" onMouseOut="mOut2(this)">师生团队</div>
+			<div class="navg1 fl STYLE14" align="center"onmouseover="mOver3(this)" onMouseOut="mOut3(this)">学科专业</div>
+		</div>
+	</div>
+	<div class="comwidth">
+		<div class="passage"></div></div>
+	<div class="jt">
+    <a href="#xinxi">
+      <img src="/static/images/icon_001@3x.png" alt="jiantou" width="25" height="25" align="middle">
+    </a>
+    <a name="xinxi">
+      <div class="ufo fl"></div>
+    </a>
+  </div>
+
+</div>
+
+<div class="frame">
+
+	<div class="comwidth">
+		<div class="dllogo"><a href="images/beijing2.jpg"><img src="/static/images/dlicon.png" alt="下载icon" align="middle" style="padding-top:10px"></a>
+		</div>
+	</div>
+	<div class="comwidth">
+		<div class="passage">
+			<div class="bang fl">
+				<div class="blue"><h2 align="center" class="STYLE14 STYLE15">办公信息</h2>
+				</div>
+				<div class="blank">
+					<ul class="bg STYLE12">
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a id="more" href="/article/1">                ...</a></div></li>
+					</ul>
+				</div>
+			</div>
+			 <div class="bang2 fl">
+				<div class="blue"><h2 align="center" class="STYLE16">本科教学教务</h2>
+				</div>
+				<div class="blank">
+					<ul class="bg STYLE12">
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a id="more" href="/article/1"> ...</a></div></li>
+					</ul>
+			  </div>
+			</div>
+			<div class="bang2 fl">
+				<div class="blue"><h2 align="center" class="STYLE16">学生工作</h2>
+				</div>
+				<div class="blank">
+					<ul class="bg STYLE12">
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a id="more" href="/article/1">                ...</a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bang2 fl">
+				<div class="blue"><h2 align="center" class="STYLE16"> 科研与研究生</h2>
+				</div>
+				<div class="blank">
+					<ul class="bg STYLE12">
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a id="more" href="/article/1">                ...</a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bang2 fl">
+				<div class="blue"><h2 align="center" class="STYLE16">对外合作交流</h2>
+				</div>
+				<div class="blank">
+					<ul class="bg STYLE12">
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a class="article1" href="/article/1">资讯管理学院“两...</a></div></li>
+						<li class="STYLE13"><div><a id="more" href="/article/1">                ...</a></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jt">
+    <a href="#huodon">
+      <img src="/static/images/icon_001@3x.png" alt="jiantou" width="25" height="25" align="middle">
+    </a>
+    <a name="huodon">
+      <div class="ufo fl"></div>
+    </a>
+  </div>
+</div>
+<div class="frame3">
+<div class="box">
+	<div class="comwidth">
+		<div class="acpic fl"><a href="#" onMouseOver="mouseOver()" onMouseOut="mouseOut()">
+		<img src="/static/images/lac3.jpg" alt="焕文杯"width=415px height=600px id="b1"/>
+		</a></div>
+		<div class="acpic fl"><img src="/static/images/middleac.jpg" alt="RM"width=415px height=600px;></div>
+		<div class="acpic fl"><img src="/static/images/rac.jpg"alt="交流"width=415px height=600px;></div>
+	</div>
+</div>
+<div class="more">
+<a href="#"><img src="/static/images/modomodo.png" alt="gengduo"></a>
+</div>
+</div>
+<div class="bottombar">
+<div class="comwidth">
+	<div class="botlogo fl">
+		<div class="sysupic">
+			<img src="/static/images/sysu.jpg" alt="中山大学" style="padding-top:20px">
+		</div>
+		<div class="copyright" style="display:none">
+			<img src="/static/images/cpr.jpg" alt="copyright" style="padding-left:75px;">
+		</div>
+	</div>
+	<div class="yishushu fl"><div class="yishu"></div></div>
+	<div class="findus fl">
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">网站地图</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">关于我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">加入我们</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">广告协议</a></li>
+			</ul>
+		</div>
+		<div class="blank1 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26"><a href="#">建议意见</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">院长热线</a></li>
+				<li class="STYLE13 STYLE39"><a href="#">邮件建议</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="guanzhu fl">
+		<div class="STYLE13 STYLE39 STYLE26">关注我们</div>
+		<div class="erweima"><img src="/static/images/cross.png" alr="erweimama" width=100% height=100%></div>
+	</div>
+	<div class="blank2 fl">
+			<ul class="oheeh">
+				<li class="STYLE13 STYLE39 STYLE26">
+				  <div align="left">联系我们</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">电话：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">传真：39332658</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">邮件：imim@mail.sysu.edu.cn</div>
+				</li>
+				<li class="STYLE13 STYLE39">
+				  <div align="left">广州市广州大学城外环东路132号</div>
+				</li>
+			</ul>
+	</div>
+</div>
+</div>
+<script>
+// $("a").attr("display:block");
+// console.log($("#article1"));
+// $(".article1").attr("onmouseover","mOver4(this)");
+// $(".article1").attr("onmouseout","mOut4(this)");
+</script>
+
+</body>
+</html>

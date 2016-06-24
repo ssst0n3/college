@@ -10,11 +10,12 @@ sys.setdefaultencoding('utf-8')
 from flask import render_template
 from app import app
 
-# # 首页
-# @app.route('/')
-# @app.route('/index')
-# def index():
-#     return 'Hello, World! This is a index page! But our designer have not give me the index page! <br> <a href="xxgg">信息公告</a> &emsp; <a href="xygk">学院概况</a> &emsp; <a href="admin">后台管理</a>'
+# 首页
+@app.route('/')
+@app.route('/index/')
+def index():
+    return render_template("index.html")
+
 
 # 信息公告页
 @app.route('/xxgg/')
@@ -27,9 +28,6 @@ def xxgg():
 
 
 
-@app.route('/index/')
-def index():
-    return render_template("index.html")
 
 @app.route('/teacher/')
 @app.route('/teacher/<int:id>')
@@ -127,7 +125,13 @@ def admin(operation=None, tableName=None, action="show"):
     else:
         return 'index'
 
-
-
 # 检索功能由第三方提供
 # 评论、分享功能由多说提供
+
+
+
+
+
+@app.route('/test')
+def test():
+    return render_template("st0n3.html")

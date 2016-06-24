@@ -1,0 +1,34 @@
+.for-padding{
+  height: 13%;
+}
+.articles{
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+.articles-1{
+  width: 20%;
+  margin-top: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
+  height: 90%;
+}
+.articles-title{
+  color: #fff !important;
+  background-color: #0187d0 !important;
+  text-align: center;
+  font-size: 30px !important;
+  height: 8%;
+}
+.articles-last{
+  text-align: center;
+}
+.articles-1 span{
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  font-size: 22px;
+  color: #000;
+  padding-top: 5%;
+  padding-left: 5%;
+}
